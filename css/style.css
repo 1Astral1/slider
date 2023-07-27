@@ -96,12 +96,19 @@ display: none;
  .hamburger{
   display:flex;
   position: relative;
-  z-index: 54;
+    z-index: 350;
   align-items:center;
   justify-content: end;
   width: 30px;
   height: 18px;
 }
+
+ .hamburger.active{
+  top: 20px;
+  transform: translateX(1400%);
+  transition: all 0.3s ease 0s;
+ }
+
 .hamburger__item
 {
   width: 30px;
@@ -129,20 +136,27 @@ display: none;
   position: absolute;
   bottom: 0;
   transition: all 0.3s ease 0s;
+
 }
 
 .hamburger.active::before
 {
   top: 50%;
   transform: rotate(-45deg) translate(0,-50%);
+  background-color:#fff ;
 }
 .hamburger.active::after
 {
   bottom: 50%;
   transform: rotate(45deg) translate(0,50%);
+  background-color:#fff ;
 }
 .showMenu {
   transform: translateX(0);
+}
+.hamburger.active span
+{
+  display: none;
 }
 
 .hamburger {
@@ -151,20 +165,26 @@ display: none;
  .nav{
    transform: translateX(-110%);
    flex-direction: column;
-   height: 30%;
-   width: 30%;
+   height: 100%;
+   width: 20%;
    top: 0;bottom:0;left: 0;right: 0;
-   z-index: 50;
+    z-index: 252;
    overflow: auto;
    padding: 50px 40px;
    background-color:#1C1E53;
   transition: all .3s;
+
+ }
+ .background
+ {
+  opacity: 0.7;
  }
 .open 
 {
   transform: translateY(0%);
   opacity:1;
 }
+
  .nav__list ul
  {
    flex-direction: column;
@@ -184,5 +204,59 @@ display: none;
  .nav
  {
   display: block;
+  overflow: visible;
+  position: absolute;
  }
-  
+    .background
+    {
+      display: block!important;
+    }
+ .body__inner
+ {
+  display: none;
+    opacity: 0.7;
+      width: 118%;
+      top: -8px;
+      height: 111%;
+      left: -1%;
+      background-color: #000;
+      position: absolute;
+      z-index: 222;
+ }
+ .krest__item
+ {
+position: absolute;
+  top: 16px;
+  right: 37px;
+  background-color: #fff;
+
+ }
+ .krest__item::after
+ {
+  content: '';
+    width: 30px;
+    height: 3px;
+  background-color: #fff;
+    position: absolute;
+    bottom: 0;
+transform: rotate(45deg);
+  bottom: 50%;
+
+ }
+    .krest__item::before
+    {
+      content: '';
+        width: 30px;
+        height: 3px;
+  background-color: #fff;
+        position: absolute;
+        bottom: 0;
+    
+       transform: rotate(-45deg);
+      
+    }
+
+body
+{
+  position: relative;
+}
