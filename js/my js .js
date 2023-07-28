@@ -54,10 +54,9 @@ class newSlider {
       items.style.height = "auto";
     });
   }
+  add;
 
   rollSlider() {
-    console.log({ count: this.count, width: this.width });
-
     this.sliderLine.style.transform = `translate(-${
       this.count * this.width
     }px)`;
@@ -65,33 +64,6 @@ class newSlider {
 }
 
 const slider = new newSlider("#slider1");
-
-// window = addEventListener("resize", init);
-// init();
-// next()
-// {
-// nextbutton.addEventListener("click",()=>
-// {
-//   count++;
-//   if (count >= images.length) {
-//     count = 0;
-//   }
-//   rollSlider();})
-// };
-// previous () {
-// prevbutton.addEventListener("click", ()=>
-// {
-//   count--;
-//   if (count <= 0) {
-//     count = 0;
-//   }
-//   rollSlider();})
-
-// };
-//  rollSlider() {
-//   sliderLine.style.transform = "translate(-" + count * width + "px)";
-// }
-// }
 
 let active = false;
 

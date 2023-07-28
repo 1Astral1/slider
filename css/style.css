@@ -154,10 +154,7 @@ display: none;
 .showMenu {
   transform: translateX(0);
 }
-.hamburger.active span
-{
-  display: none;
-}
+
 
 .hamburger {
   display:flex;
@@ -189,11 +186,13 @@ display: none;
  {
    flex-direction: column;
    row-gap: 30px;
+ 
   
  }
  .nav__list
  {
   list-style: none;
+  
  }
  .nav__list-link
  {
@@ -260,3 +259,4 @@ body
 {
   position: relative;
 }
+
