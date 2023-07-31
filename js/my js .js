@@ -1,8 +1,3 @@
-const images = document.querySelectorAll(".img");
-const sliderLine = document.querySelector(".slider-line");
-let count = 0;
-let width;
-
 class newSlider {
   images;
   sliderLine;
@@ -48,7 +43,6 @@ class newSlider {
 
   init() {
     this.sliderLine.style.width = this.width * this.images.length + "px";
-
     this.images.forEach((items) => {
       items.style.width = width + "px";
       items.style.height = "auto";
